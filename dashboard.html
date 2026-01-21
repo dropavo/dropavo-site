@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dropavo Merchant Dashboard - Manage your products, orders, and pricing.">
+  
+  <title>Dashboard — Dropavo</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
+</head>
+<body>
+  <!-- ========================================================================
+       DASHBOARD LAYOUT
+       ======================================================================== -->
+  <div class="dashboard-layout">
+    
+    <!-- ======================================================================
+         SIDEBAR NAVIGATION
+         ====================================================================== -->
+    <aside class="sidebar">
+      <!-- Sidebar Header / Logo -->
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <img src="logo.png" alt="Dropavo" class="logo-img">
+          </div>
+          <span class="logo-wordmark">Dropavo</span>
+        </a>
+      </div>
+      
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar-nav">
+        <!-- Main Section -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Main</div>
+          
+          <a href="#" class="sidebar-link active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+            <span>Dashboard</span>
+          </a>
+          
+          <a href="#products-section" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+            <span>Products</span>
+            <span class="badge badge-info">248</span>
+          </a>
+          
+          <a href="#orders-section" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span>Orders</span>
+            <span class="badge badge-warning">12</span>
+          </a>
+          
+          <a href="#" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+            <span>Analytics</span>
+          </a>
+        </div>
+        
+        <!-- Management Section -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Management</div>
+          
+          <a href="#config-section" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <span>Pricing & Markup</span>
+          </a>
+          
+          <a href="#" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+            <span>Shipping</span>
+          </a>
+          
+          <a href="#" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <span>Customers</span>
+          </a>
+        </div>
+        
+        <!-- Integrations Section -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Integrations</div>
+          
+          <a href="#" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            <span>Shopify</span>
+            <span class="badge badge-success">Soon</span>
+          </a>
+          
+          <a href="#" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            <span>API Access</span>
+          </a>
+        </div>
+        
+        <!-- Settings Section -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Account</div>
+          
+          <a href="#" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+            <span>Settings</span>
+          </a>
+          
+          <a href="#" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>Help & Support</span>
+          </a>
+          
+          <a href="#" class="sidebar-link" onclick="handleLogout(event)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+              <polyline points="16 17 21 12 16 7"/>
+              <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+            <span>Log Out</span>
+          </a>
+        </div>
+      </nav>
+      
+      <!-- Sidebar Footer / User -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="sidebar-user-avatar">JD</div>
+          <div class="sidebar-user-info">
+            <div class="sidebar-user-name">Jane Doe</div>
+            <div class="sidebar-user-email">jane@example.com</div>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-text-muted);">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ======================================================================
+         MAIN CONTENT AREA
+         ====================================================================== -->
+    <main class="dashboard-main">
+      <!-- Dashboard Header -->
+      <header class="dashboard-header">
+        <div class="dashboard-header-left">
+          <h1 class="dashboard-title">Dashboard</h1>
+        </div>
+        
+        <div class="dashboard-header-right">
+          <!-- Search -->
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" placeholder="Search products, orders...">
+          </div>
+          
+          <!-- Notifications -->
+          <button class="icon-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            <span class="notification-dot"></span>
+          </button>
+          
+          <!-- User Menu -->
+          <button class="icon-btn" aria-label="User menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-content">
+        
+        <!-- ================================================================
+             STATS CARDS
+             ================================================================ -->
+        <div class="stats-grid">
+          <!-- Total Revenue -->
+          <div class="card stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <div class="stat-card-trend up">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                </svg>
+                +12.5%
+              </div>
+            </div>
+            <div class="stat-card-value">$24,892</div>
+            <div class="stat-card-label">Total Revenue (30d)</div>
+          </div>
+          
+          <!-- Orders -->
+          <div class="card stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+              </div>
+              <div class="stat-card-trend up">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                </svg>
+                +8.2%
+              </div>
+            </div>
+            <div class="stat-card-value">342</div>
+            <div class="stat-card-label">Orders This Month</div>
+          </div>
+          
+          <!-- Avg. Profit Margin -->
+          <div class="card stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+              </div>
+              <div class="stat-card-trend up">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                </svg>
+                +2.1%
+              </div>
+            </div>
+            <div class="stat-card-value">38.4%</div>
+            <div class="stat-card-label">Avg. Profit Margin</div>
+          </div>
+          
+          <!-- Products Listed -->
+          <div class="card stat-card">
+            <div class="stat-card-header">
+              <div class="stat-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+              </div>
+              <div class="stat-card-trend down">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+                </svg>
+                -3
+              </div>
+            </div>
+            <div class="stat-card-value">248</div>
+            <div class="stat-card-label">Active Products</div>
+          </div>
+        </div>
+
+        <!-- ================================================================
+             MARKUP CONFIGURATION PANEL
+             ================================================================ -->
+        <section id="config-section" class="content-section">
+          <div class="card config-panel">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; margin-right: 8px; color: var(--color-accent-primary);">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+              Pricing & Markup Configuration
+            </h4>
+            
+            <div class="config-grid">
+              <!-- Global Markup -->
+              <div class="config-item">
+                <label for="global-markup">Global Markup Percentage</label>
+                <div class="slider-container">
+                  <input type="range" id="global-markup" class="slider" min="0" max="100" value="35">
+                  <div class="slider-labels">
+                    <span>0%</span>
+                    <span id="markup-display">35%</span>
+                    <span>100%</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Minimum Margin -->
+              <div class="config-item">
+                <label for="min-margin">Minimum Profit Margin</label>
+                <div class="config-input-group">
+                  <input type="number" id="min-margin" class="input" value="20" min="0" max="100">
+                  <span class="unit">%</span>
+                </div>
+              </div>
+              
+              <!-- Rounding Strategy -->
+              <div class="config-item">
+                <label for="rounding">Price Rounding Strategy</label>
+                <select id="rounding" class="input">
+                  <option value="none">No Rounding</option>
+                  <option value="99" selected>Round to .99</option>
+                  <option value="95">Round to .95</option>
+                  <option value="00">Round to .00</option>
+                </select>
+              </div>
+              
+              <!-- Currency -->
+              <div class="config-item">
+                <label for="currency">Display Currency</label>
+                <select id="currency" class="input">
+                  <option value="usd" selected>USD ($)</option>
+                  <option value="eur">EUR (€)</option>
+                  <option value="gbp">GBP (£)</option>
+                  <option value="cad">CAD ($)</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="config-preview">
+              <div class="config-preview-row">
+                <span class="config-preview-label">Example Product Cost</span>
+                <span class="config-preview-value">$15.00</span>
+              </div>
+              <div class="config-preview-row">
+                <span class="config-preview-label">+ Markup (35%)</span>
+                <span class="config-preview-value">+ $5.25</span>
+              </div>
+              <div class="config-preview-row">
+                <span class="config-preview-label">Your Selling Price</span>
+                <span class="config-preview-value highlight">$20.99</span>
+              </div>
+              <div class="config-preview-row">
+                <span class="config-preview-label">Your Profit</span>
+                <span class="config-preview-value highlight">$5.99 (28.5%)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             PRODUCT CATALOG
+             ================================================================ -->
+        <section id="products-section" class="content-section">
+          <div class="content-header">
+            <h3>Product Catalog</h3>
+            <div class="content-header-actions">
+              <button class="filter-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                </svg>
+                Filter
+              </button>
+              <button class="filter-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="4" y1="21" x2="4" y2="14"/>
+                  <line x1="4" y1="10" x2="4" y2="3"/>
+                  <line x1="12" y1="21" x2="12" y2="12"/>
+                  <line x1="12" y1="8" x2="12" y2="3"/>
+                  <line x1="20" y1="21" x2="20" y2="16"/>
+                  <line x1="20" y1="12" x2="20" y2="3"/>
+                </svg>
+                Sort
+              </button>
+              <button class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+                Import Products
+              </button>
+            </div>
+          </div>
+          
+          <!-- Product Grid -->
+          <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="card card-glow product-card">
+              <div class="product-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <span class="badge badge-success product-badge">Best Seller</span>
+              </div>
+              <div class="product-content">
+                <div class="product-category">Electronics</div>
+                <h5 class="product-name">Wireless Bluetooth Earbuds Pro</h5>
+                <div class="product-pricing">
+                  <span class="product-price">$49.99</span>
+                  <span class="product-cost">$32.00</span>
+                  <span class="product-margin">+56%</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-secondary">Edit</button>
+                  <button class="btn btn-primary">Push to Store</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="card card-glow product-card">
+              <div class="product-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+              </div>
+              <div class="product-content">
+                <div class="product-category">Home & Living</div>
+                <h5 class="product-name">Minimalist LED Desk Lamp</h5>
+                <div class="product-pricing">
+                  <span class="product-price">$34.99</span>
+                  <span class="product-cost">$22.50</span>
+                  <span class="product-margin">+55%</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-secondary">Edit</button>
+                  <button class="btn btn-primary">Push to Store</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="card card-glow product-card">
+              <div class="product-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <span class="badge badge-warning product-badge">Low Stock</span>
+              </div>
+              <div class="product-content">
+                <div class="product-category">Fashion</div>
+                <h5 class="product-name">Unisex Canvas Backpack</h5>
+                <div class="product-pricing">
+                  <span class="product-price">$42.99</span>
+                  <span class="product-cost">$28.00</span>
+                  <span class="product-margin">+53%</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-secondary">Edit</button>
+                  <button class="btn btn-primary">Push to Store</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="card card-glow product-card">
+              <div class="product-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+              </div>
+              <div class="product-content">
+                <div class="product-category">Beauty</div>
+                <h5 class="product-name">Jade Facial Roller Set</h5>
+                <div class="product-pricing">
+                  <span class="product-price">$19.99</span>
+                  <span class="product-cost">$8.50</span>
+                  <span class="product-margin">+135%</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-secondary">Edit</button>
+                  <button class="btn btn-primary">Push to Store</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="card card-glow product-card">
+              <div class="product-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+              </div>
+              <div class="product-content">
+                <div class="product-category">Fitness</div>
+                <h5 class="product-name">Resistance Bands Set (5pc)</h5>
+                <div class="product-pricing">
+                  <span class="product-price">$24.99</span>
+                  <span class="product-cost">$12.00</span>
+                  <span class="product-margin">+108%</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-secondary">Edit</button>
+                  <button class="btn btn-primary">Push to Store</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="card card-glow product-card">
+              <div class="product-image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <span class="badge badge-info product-badge">New</span>
+              </div>
+              <div class="product-content">
+                <div class="product-category">Tech Accessories</div>
+                <h5 class="product-name">Magnetic Phone Car Mount</h5>
+                <div class="product-pricing">
+                  <span class="product-price">$18.99</span>
+                  <span class="product-cost">$9.00</span>
+                  <span class="product-margin">+111%</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-secondary">Edit</button>
+                  <button class="btn btn-primary">Push to Store</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             ORDER PIPELINE
+             ================================================================ -->
+        <section id="orders-section" class="content-section">
+          <div class="content-header">
+            <h3>Order Pipeline</h3>
+            <div class="content-header-actions">
+              <button class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Export
+              </button>
+            </div>
+          </div>
+          
+          <!-- Pipeline Columns -->
+          <div class="pipeline-container">
+            <!-- Pending Column -->
+            <div class="pipeline-column">
+              <div class="pipeline-header">
+                <div class="pipeline-header-left">
+                  <span class="pipeline-indicator pending"></span>
+                  <span class="pipeline-title">Pending</span>
+                </div>
+                <span class="pipeline-count">4 orders</span>
+              </div>
+              <div class="pipeline-body">
+                <!-- Order Card -->
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2847</span>
+                    <span class="order-date">2 min ago</span>
+                  </div>
+                  <p class="order-product">Wireless Bluetooth Earbuds Pro × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Alex Johnson</span>
+                    <span class="order-amount">$49.99</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2846</span>
+                    <span class="order-date">15 min ago</span>
+                  </div>
+                  <p class="order-product">Jade Facial Roller Set × 2</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Sarah Chen</span>
+                    <span class="order-amount">$39.98</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2845</span>
+                    <span class="order-date">32 min ago</span>
+                  </div>
+                  <p class="order-product">Minimalist LED Desk Lamp × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Mike Rodriguez</span>
+                    <span class="order-amount">$34.99</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2844</span>
+                    <span class="order-date">1 hr ago</span>
+                  </div>
+                  <p class="order-product">Resistance Bands Set × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Emily Watson</span>
+                    <span class="order-amount">$24.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sent to Supplier Column -->
+            <div class="pipeline-column">
+              <div class="pipeline-header">
+                <div class="pipeline-header-left">
+                  <span class="pipeline-indicator sent"></span>
+                  <span class="pipeline-title">Sent to Supplier</span>
+                </div>
+                <span class="pipeline-count">5 orders</span>
+              </div>
+              <div class="pipeline-body">
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2840</span>
+                    <span class="order-date">3 hrs ago</span>
+                  </div>
+                  <p class="order-product">Unisex Canvas Backpack × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">David Kim</span>
+                    <span class="order-amount">$42.99</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2839</span>
+                    <span class="order-date">4 hrs ago</span>
+                  </div>
+                  <p class="order-product">Magnetic Phone Car Mount × 3</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Lisa Park</span>
+                    <span class="order-amount">$56.97</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2838</span>
+                    <span class="order-date">5 hrs ago</span>
+                  </div>
+                  <p class="order-product">Wireless Bluetooth Earbuds Pro × 2</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Tom Anderson</span>
+                    <span class="order-amount">$99.98</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2837</span>
+                    <span class="order-date">6 hrs ago</span>
+                  </div>
+                  <p class="order-product">Jade Facial Roller Set × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Rachel Green</span>
+                    <span class="order-amount">$19.99</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2836</span>
+                    <span class="order-date">7 hrs ago</span>
+                  </div>
+                  <p class="order-product">Minimalist LED Desk Lamp × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Chris Murphy</span>
+                    <span class="order-amount">$34.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Fulfilled Column -->
+            <div class="pipeline-column">
+              <div class="pipeline-header">
+                <div class="pipeline-header-left">
+                  <span class="pipeline-indicator fulfilled"></span>
+                  <span class="pipeline-title">Fulfilled</span>
+                </div>
+                <span class="pipeline-count">3 orders</span>
+              </div>
+              <div class="pipeline-body">
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2830</span>
+                    <span class="order-date">Yesterday</span>
+                  </div>
+                  <p class="order-product">Resistance Bands Set × 2</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Jordan Taylor</span>
+                    <span class="order-amount">$49.98</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2829</span>
+                    <span class="order-date">Yesterday</span>
+                  </div>
+                  <p class="order-product">Wireless Bluetooth Earbuds Pro × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Nina Patel</span>
+                    <span class="order-amount">$49.99</span>
+                  </div>
+                </div>
+                
+                <div class="order-card">
+                  <div class="order-header">
+                    <span class="order-id">#DF-2828</span>
+                    <span class="order-date">2 days ago</span>
+                  </div>
+                  <p class="order-product">Magnetic Phone Car Mount × 1</p>
+                  <div class="order-footer">
+                    <span class="order-customer">Ben Wilson</span>
+                    <span class="order-amount">$18.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================================================
+       SCRIPTS
+       ======================================================================== -->
+  <script>
+    // Markup slider interaction
+    const markupSlider = document.getElementById('global-markup');
+    const markupDisplay = document.getElementById('markup-display');
+    
+    if (markupSlider && markupDisplay) {
+      markupSlider.addEventListener('input', function() {
+        markupDisplay.textContent = this.value + '%';
+        updatePreview(this.value);
+      });
+    }
+    
+    // Update pricing preview
+    function updatePreview(markupPercent) {
+      const baseCost = 15.00;
+      const markup = baseCost * (markupPercent / 100);
+      let sellingPrice = baseCost + markup;
+      
+      // Apply rounding strategy
+      const roundingSelect = document.getElementById('rounding');
+      if (roundingSelect) {
+        const strategy = roundingSelect.value;
+        if (strategy === '99') {
+          sellingPrice = Math.floor(sellingPrice) + 0.99;
+        } else if (strategy === '95') {
+          sellingPrice = Math.floor(sellingPrice) + 0.95;
+        } else if (strategy === '00') {
+          sellingPrice = Math.round(sellingPrice);
+        }
+      }
+      
+      const profit = sellingPrice - baseCost;
+      const profitPercent = ((profit / sellingPrice) * 100).toFixed(1);
+      
+      // Update preview values (would update DOM in production)
+      console.log(`Selling Price: $${sellingPrice.toFixed(2)}, Profit: $${profit.toFixed(2)} (${profitPercent}%)`);
+    }
+    
+    // Smooth scroll for sidebar links
+    document.querySelectorAll('.sidebar-link[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Mobile sidebar toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (mobileToggle && sidebar) {
+      mobileToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+    
+    // Handle logout
+    function handleLogout(e) {
+      e.preventDefault();
+      localStorage.removeItem('dropavo_logged_in');
+      localStorage.removeItem('dropavo_user');
+      window.location.href = 'index.html';
+    }
+    
+    // Update user info from localStorage
+    function updateUserInfo() {
+      const userStr = localStorage.getItem('dropavo_user');
+      if (userStr) {
+        try {
+          const user = JSON.parse(userStr);
+          const userName = document.querySelector('.sidebar-user-name');
+          const userEmail = document.querySelector('.sidebar-user-email');
+          const userAvatar = document.querySelector('.sidebar-user-avatar');
+          
+          if (userName) userName.textContent = user.name || 'Merchant';
+          if (userEmail) userEmail.textContent = user.email || 'user@example.com';
+          if (userAvatar) {
+            const initials = (user.name || 'U').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+            userAvatar.textContent = initials;
+          }
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+        }
+      }
+    }
+    
+    // Run on page load
+    updateUserInfo();
+  </script>
+</body>
+</html>

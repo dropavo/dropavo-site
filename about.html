@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Dropavo - the intelligent dropshipping platform connecting merchants with trusted suppliers.">
+  
+  <title>About Us — Dropavo</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
+</head>
+<body>
+  <!-- ========================================================================
+       HEADER / NAVIGATION
+       ======================================================================== -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="logo.png" alt="Dropavo" class="logo-img">
+        </div>
+        <span class="logo-wordmark">Dropavo</span>
+      </a>
+      
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      
+      <!-- Nav Actions (Logged Out) -->
+      <div class="nav-actions nav-actions-logged-out">
+        <a href="login.html" class="btn btn-ghost">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Get Started Free</a>
+      </div>
+      
+      <!-- Nav Actions (Logged In) -->
+      <div class="nav-actions nav-actions-logged-in" style="display: none;">
+        <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       ABOUT HERO SECTION
+       ======================================================================== -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>Built for <span class="text-gradient">modern merchants</span></h1>
+      <p>We're the technology layer that connects independent sellers with world-class suppliers — making dropshipping smarter, faster, and more profitable.</p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       OUR ROLE SECTION
+       ======================================================================== -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>What we do</h2>
+          <p>
+            Dropavo is a B2B platform that sits between product suppliers and independent dropshipping merchants. 
+            We curate products from trusted suppliers, provide tools for markup configuration, and automate the 
+            order forwarding process.
+          </p>
+          <p>
+            When a customer places an order on your store, we automatically route it to the appropriate supplier 
+            for fulfillment. This means you can focus on marketing and growing your brand while the logistics 
+            happen behind the scenes.
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="flow-visual">
+            <div class="flow-visual-step">
+              <div class="flow-visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+              </div>
+              <div class="flow-visual-content">
+                <h5>Supplier Network</h5>
+                <p>Trusted manufacturers & wholesalers</p>
+              </div>
+            </div>
+            
+            <div class="flow-visual-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <polyline points="19 12 12 19 5 12"/>
+              </svg>
+            </div>
+            
+            <div class="flow-visual-step" style="background: var(--color-accent-glow); border: 1px solid var(--color-border-accent);">
+              <div class="flow-visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <div class="flow-visual-content">
+                <h5>Dropavo Platform</h5>
+                <p>Product curation, pricing & automation</p>
+              </div>
+            </div>
+            
+            <div class="flow-visual-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <polyline points="19 12 12 19 5 12"/>
+              </svg>
+            </div>
+            
+            <div class="flow-visual-step">
+              <div class="flow-visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <div class="flow-visual-content">
+                <h5>Your Store</h5>
+                <p>Your brand, your prices, your customers</p>
+              </div>
+            </div>
+            
+            <div class="flow-visual-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <polyline points="19 12 12 19 5 12"/>
+              </svg>
+            </div>
+            
+            <div class="flow-visual-step">
+              <div class="flow-visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <div class="flow-visual-content">
+                <h5>Your Customers</h5>
+                <p>Products delivered to their doorstep</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FULFILLMENT TRANSPARENCY SECTION
+       ======================================================================== -->
+  <section class="about-section" style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="about-content reverse">
+        <div class="about-text">
+          <h2>Third-party fulfillment</h2>
+          <p>
+            <strong>Important:</strong> We sell products through our platform, but fulfillment is handled 
+            by independent third-party suppliers. This is the standard dropshipping model used by millions 
+            of merchants worldwide.
+          </p>
+          <p>
+            Our primary supplier partner is <strong>Zendrop</strong>, known for their US-based warehousing, 
+            fast shipping times, and quality control processes. We've chosen to integrate with Zendrop 
+            because of their merchant-friendly API, transparent tracking, and commitment to quality.
+          </p>
+          
+          <!-- Trust Disclaimer -->
+          <div class="disclaimer-box">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+              Transparency Notice
+            </h4>
+            <p>
+              We believe in full transparency with our merchants. While we curate and manage products 
+              through our platform, actual product storage, packaging, and shipping are performed by 
+              our supplier partners. Shipping times, product quality, and fulfillment accuracy are 
+              ultimately dependent on these third-party providers. We work closely with our suppliers 
+              to maintain high standards, but cannot guarantee every aspect of the fulfillment process.
+            </p>
+          </div>
+        </div>
+        
+        <div class="about-visual">
+          <!-- Trust Stats / Credentials -->
+          <div class="trust-grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+            <div class="card trust-card">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h4>Vetted Suppliers</h4>
+              <p>All partners undergo quality verification</p>
+            </div>
+            
+            <div class="card trust-card">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="3" width="15" height="13"/>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
+              <h4>US Warehousing</h4>
+              <p>Faster delivery to North American customers</p>
+            </div>
+            
+            <div class="card trust-card">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <h4>Real-time Tracking</h4>
+              <p>End-to-end order visibility</p>
+            </div>
+            
+            <div class="card trust-card">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </div>
+              <h4>Dedicated Support</h4>
+              <p>Help when you need it</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WHY ZENDROP SECTION
+       ======================================================================== -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why we chose Zendrop</h2>
+        <p>After evaluating multiple supplier networks, we selected Zendrop as our primary integration partner for several key reasons.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="card card-glow feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h4>Modern API</h4>
+          <p>Clean, well-documented API that enables seamless integration and real-time order synchronization. Built for developers, by developers.</p>
+        </div>
+        
+        <div class="card card-glow feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="10" r="3"/>
+              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/>
+            </svg>
+          </div>
+          <h4>US Fulfillment</h4>
+          <p>Products ship from US warehouses, dramatically reducing delivery times for North American customers compared to overseas fulfillment.</p>
+        </div>
+        
+        <div class="card card-glow feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
+          <h4>Scalability</h4>
+          <p>Infrastructure designed for growing businesses. Whether you're processing 10 or 10,000 orders daily, Zendrop scales with you.</p>
+        </div>
+        
+        <div class="card card-glow feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h4>Quality Control</h4>
+          <p>Rigorous product vetting and quality assurance processes. Products are inspected before shipping to minimize returns and complaints.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TRUST / VALUES SECTION
+       ======================================================================== -->
+  <section class="about-section" style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our commitment to you</h2>
+        <p>The values that guide everything we build.</p>
+      </div>
+      
+      <div class="trust-grid">
+        <div class="card trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h4>Transparency</h4>
+          <p>We're upfront about how our platform works, who fulfills orders, and what you can expect. No hidden surprises.</p>
+        </div>
+        
+        <div class="card trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h4>Merchant Success</h4>
+          <p>Your success is our success. We build tools that help you grow, not just tools that benefit us.</p>
+        </div>
+        
+        <div class="card trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <h4>Reliability</h4>
+          <p>We maintain high uptime standards and work with suppliers who share our commitment to dependable service.</p>
+        </div>
+        
+        <div class="card trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+          <h4>Support</h4>
+          <p>Real humans ready to help when you need it. We're here to solve problems, not deflect them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CTA SECTION
+       ======================================================================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to start selling?</h2>
+        <p>Join thousands of merchants who trust Dropavo to power their dropshipping business.</p>
+        
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <a href="index.html#signup" class="btn btn-primary btn-lg">
+            Start Free Trial
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="dashboard.html" class="btn btn-secondary btn-lg">
+            View Dashboard Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Footer Grid -->
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <img src="logo.png" alt="Dropavo" class="logo-img">
+            </div>
+            <span class="logo-wordmark">Dropavo</span>
+          </a>
+          <p>The intelligent dropshipping platform for modern merchants. Connect, automate, scale.</p>
+          
+          <!-- Social Links -->
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Product Links -->
+        <nav class="footer-nav">
+          <h6>Product</h6>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="#integrations">Integrations</a></li>
+            <li><a href="#changelog">Changelog</a></li>
+            <li><a href="#api">API Docs</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Company Links -->
+        <nav class="footer-nav">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Support Links -->
+        <nav class="footer-nav">
+          <h6>Support</h6>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#status">System Status</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dropavo Inc. All rights reserved.</p>
+        
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="refund.html">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SCRIPTS
+       ======================================================================== -->
+  <script>
+    // Check login state and update nav
+    function updateNavForLoginState() {
+      const isLoggedIn = localStorage.getItem('dropavo_logged_in') === 'true';
+      const loggedOutNav = document.querySelector('.nav-actions-logged-out');
+      const loggedInNav = document.querySelector('.nav-actions-logged-in');
+      
+      if (isLoggedIn) {
+        if (loggedOutNav) loggedOutNav.style.display = 'none';
+        if (loggedInNav) loggedInNav.style.display = 'flex';
+      } else {
+        if (loggedOutNav) loggedOutNav.style.display = 'flex';
+        if (loggedInNav) loggedInNav.style.display = 'none';
+      }
+    }
+    
+    // Run on page load
+    updateNavForLoginState();
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Header background on scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(10, 10, 15, 0.95)';
+      } else {
+        header.style.background = 'rgba(10, 10, 15, 0.8)';
+      }
+    });
+  </script>
+</body>
+</html>

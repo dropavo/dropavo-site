@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover products to dropship with Dropavo. Browse our curated catalog of 500K+ products from trusted suppliers.">
+  
+  <title>Discover Products — Dropavo</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥑</text></svg>">
+</head>
+<body>
+  <!-- ========================================================================
+       HEADER / NAVIGATION
+       ======================================================================== -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="logo.png" alt="Dropavo" class="logo-img">
+        </div>
+        <span class="logo-wordmark">Dropavo</span>
+      </a>
+      
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="dropship.html" class="nav-link active">Dropship</a>
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      
+      <!-- Nav Actions (Logged Out) -->
+      <div class="nav-actions nav-actions-logged-out">
+        <a href="login.html" class="btn btn-ghost">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Get Started Free</a>
+      </div>
+      
+      <!-- Nav Actions (Logged In) -->
+      <div class="nav-actions nav-actions-logged-in" style="display: none;">
+        <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       DROPSHIP HERO
+       ======================================================================== -->
+  <section class="dropship-hero">
+    <div class="container">
+      <h1>Discover <span class="text-gradient">Winning Products</span></h1>
+      <p>Browse our curated catalog of 500K+ products from trusted suppliers. Find your next bestseller with powerful filters and real-time data.</p>
+      
+      <!-- Search Bar -->
+      <div class="dropship-search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="product-search" placeholder="Search products, categories, or keywords..." onkeyup="filterProducts()">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRODUCT DISCOVERY SECTION
+       ======================================================================== -->
+  <section class="dropship-content">
+    <div class="container">
+      <div class="dropship-layout">
+        
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+          <div class="filters-header">
+            <h3>Filters</h3>
+            <button class="btn-text" onclick="clearFilters()">Clear All</button>
+          </div>
+          
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <h4>Category</h4>
+            <div class="filter-options">
+              <label class="filter-checkbox">
+                <input type="checkbox" value="electronics" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Electronics
+                <span class="filter-count">12,450</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="fashion" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Fashion & Apparel
+                <span class="filter-count">28,320</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="home" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Home & Garden
+                <span class="filter-count">15,890</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="beauty" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Beauty & Health
+                <span class="filter-count">9,540</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="sports" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Sports & Outdoors
+                <span class="filter-count">7,230</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="toys" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Toys & Games
+                <span class="filter-count">5,670</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="pets" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Pet Supplies
+                <span class="filter-count">3,420</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="automotive" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                Automotive
+                <span class="filter-count">4,180</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Price Range Filter -->
+          <div class="filter-group">
+            <h4>Supplier Price</h4>
+            <div class="price-range">
+              <div class="price-inputs">
+                <div class="price-input-group">
+                  <span>$</span>
+                  <input type="number" id="price-min" placeholder="0" min="0" onchange="filterProducts()">
+                </div>
+                <span class="price-separator">—</span>
+                <div class="price-input-group">
+                  <span>$</span>
+                  <input type="number" id="price-max" placeholder="500" min="0" onchange="filterProducts()">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Profit Margin Filter -->
+          <div class="filter-group">
+            <h4>Est. Profit Margin</h4>
+            <div class="filter-options">
+              <label class="filter-checkbox">
+                <input type="checkbox" value="margin-20" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                20%+ margin
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="margin-30" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                30%+ margin
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="margin-40" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                40%+ margin
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="margin-50" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                50%+ margin
+              </label>
+            </div>
+          </div>
+          
+          <!-- Shipping Time Filter -->
+          <div class="filter-group">
+            <h4>Shipping Time</h4>
+            <div class="filter-options">
+              <label class="filter-checkbox">
+                <input type="checkbox" value="ship-3" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                1-3 days (US)
+                <span class="filter-badge">Fast</span>
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="ship-7" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                3-7 days
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="ship-14" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                7-14 days
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="ship-21" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                14-21 days
+              </label>
+            </div>
+          </div>
+          
+          <!-- Supplier Rating Filter -->
+          <div class="filter-group">
+            <h4>Supplier Rating</h4>
+            <div class="filter-options">
+              <label class="filter-checkbox">
+                <input type="checkbox" value="rating-4.5" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                <span class="rating-stars">★★★★★</span> 4.5+
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="rating-4" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                <span class="rating-stars">★★★★☆</span> 4.0+
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="rating-3.5" onchange="filterProducts()">
+                <span class="checkmark"></span>
+                <span class="rating-stars">★★★☆☆</span> 3.5+
+              </label>
+            </div>
+          </div>
+          
+          <!-- Tags Filter -->
+          <div class="filter-group">
+            <h4>Product Tags</h4>
+            <div class="filter-tags">
+              <button class="filter-tag" onclick="toggleTag(this)" data-tag="trending">🔥 Trending</button>
+              <button class="filter-tag" onclick="toggleTag(this)" data-tag="bestseller">⭐ Best Seller</button>
+              <button class="filter-tag" onclick="toggleTag(this)" data-tag="new">✨ New Arrival</button>
+              <button class="filter-tag" onclick="toggleTag(this)" data-tag="eco">🌱 Eco-Friendly</button>
+              <button class="filter-tag" onclick="toggleTag(this)" data-tag="premium">💎 Premium</button>
+              <button class="filter-tag" onclick="toggleTag(this)" data-tag="bundle">📦 Bundle Deal</button>
+            </div>
+          </div>
+        </aside>
+        
+        <!-- Products Grid -->
+        <main class="products-main">
+          <!-- Results Header -->
+          <div class="results-header">
+            <div class="results-count">
+              <span id="results-count">24</span> products found
+            </div>
+            <div class="results-sort">
+              <label>Sort by:</label>
+              <select id="sort-select" onchange="sortProducts()">
+                <option value="popular">Most Popular</option>
+                <option value="newest">Newest First</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="margin">Highest Margin</option>
+                <option value="rating">Best Rated</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Products Grid -->
+          <div class="products-grid" id="products-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card" data-category="electronics" data-price="24.99" data-margin="45" data-shipping="3" data-rating="4.8" data-tags="trending,bestseller">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-trending">🔥 Trending</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Electronics</div>
+                <h3 class="product-name">Wireless Bluetooth Earbuds Pro</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$24.99</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$45.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">45%</span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    1-3 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.8 (2.4k)
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Card 2 -->
+            <div class="product-card" data-category="fashion" data-price="12.50" data-margin="60" data-shipping="7" data-rating="4.6" data-tags="bestseller">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-bestseller">⭐ Best Seller</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Fashion</div>
+                <h3 class="product-name">Minimalist Canvas Backpack</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$12.50</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$34.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">60%</span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    3-7 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.6 (1.8k)
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Card 3 -->
+            <div class="product-card" data-category="home" data-price="8.99" data-margin="55" data-shipping="7" data-rating="4.7" data-tags="eco,new">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-new">✨ New</span>
+                  <span class="badge badge-eco">🌱 Eco</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Home & Garden</div>
+                <h3 class="product-name">Bamboo Desk Organizer Set</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$8.99</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$24.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">55%</span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    3-7 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.7 (956)
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Card 4 -->
+            <div class="product-card" data-category="beauty" data-price="6.75" data-margin="70" data-shipping="3" data-rating="4.9" data-tags="trending,premium">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-trending">🔥 Trending</span>
+                  <span class="badge badge-premium">💎 Premium</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Beauty & Health</div>
+                <h3 class="product-name">Jade Facial Roller & Gua Sha Set</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$6.75</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$28.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">70%</span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    1-3 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.9 (3.2k)
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Card 5 -->
+            <div class="product-card" data-category="sports" data-price="15.99" data-margin="50" data-shipping="7" data-rating="4.5" data-tags="bestseller">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    <path d="M2 12h20"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-bestseller">⭐ Best Seller</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Sports & Outdoors</div>
+                <h3 class="product-name">Resistance Bands Set (5-Pack)</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$15.99</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$32.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">50%</span>
+                  </span>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    3-7 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.5 (1.1k)
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Card 6 -->
+            <div class="product-card" data-category="pets" data-price="9.25" data-margin="58" data-shipping="3" data-rating="4.8" data-tags="new,trending">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5M14 5.172C14 3.782 15.577 2.679 17.5 3c2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.344-2.5"/>
+                    <path d="M8 14v.5M16 14v.5M11.25 16.25h1.5L12 17l-.75-.75z"/>
+                    <path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-new">✨ New</span>
+                  <span class="badge badge-trending">🔥 Trending</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Pet Supplies</div>
+                <h3 class="product-name">Interactive Pet Puzzle Feeder</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$9.25</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$24.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">58%</span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    1-3 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.8 (876)
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Card 7 -->
+            <div class="product-card" data-category="toys" data-price="11.50" data-margin="52" data-shipping="7" data-rating="4.6" data-tags="bundle">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-bundle">📦 Bundle</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Toys & Games</div>
+                <h3 class="product-name">Magnetic Building Blocks (64pcs)</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$11.50</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$29.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">52%</span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    3-7 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.6 (654)
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product Card 8 -->
+            <div class="product-card" data-category="automotive" data-price="18.75" data-margin="48" data-shipping="7" data-rating="4.4" data-tags="bestseller">
+              <div class="product-image">
+                <div class="product-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
+                    <circle cx="6.5" cy="16.5" r="2.5"/>
+                    <circle cx="16.5" cy="16.5" r="2.5"/>
+                  </svg>
+                </div>
+                <div class="product-badges">
+                  <span class="badge badge-bestseller">⭐ Best Seller</span>
+                </div>
+                <button class="product-quick-add" title="Quick Add">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <div class="product-category">Automotive</div>
+                <h3 class="product-name">Car Phone Mount with Wireless Charger</h3>
+                <div class="product-pricing">
+                  <div class="product-cost">
+                    <span class="label">Cost</span>
+                    <span class="value">$18.75</span>
+                  </div>
+                  <div class="product-suggested">
+                    <span class="label">Suggested</span>
+                    <span class="value">$39.99</span>
+                  </div>
+                  <div class="product-margin">
+                    <span class="label">Margin</span>
+                    <span class="value positive">48%</span>
+                  </div>
+                </div>
+                <div class="product-meta">
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    3-7 days
+                  </span>
+                  <span class="meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    4.4 (432)
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Load More -->
+          <div class="load-more">
+            <button class="btn btn-secondary btn-lg">
+              Load More Products
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       LEARN CTA SECTION
+       ======================================================================== -->
+  <section class="learn-cta-section">
+    <div class="container">
+      <div class="learn-cta-card">
+        <div class="learn-cta-content">
+          <div class="learn-cta-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="learn-cta-text">
+            <h2>New to Dropshipping?</h2>
+            <p>Learn the ropes with our free curriculum. Master product research, store setup, marketing, and more — then earn your Dropavo Certificate.</p>
+          </div>
+        </div>
+        <a href="learn.html" class="btn btn-primary btn-lg">
+          Start Learning — It's Free
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <img src="logo.png" alt="Dropavo" class="logo-img">
+            </div>
+            <span class="logo-wordmark">Dropavo</span>
+          </a>
+          <p>The intelligent dropshipping platform for modern merchants. Connect, automate, scale.</p>
+        </div>
+        
+        <nav class="footer-nav">
+          <h6>Product</h6>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="dropship.html">Dropship</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="#api">API Docs</a></li>
+          </ul>
+        </nav>
+        
+        <nav class="footer-nav">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <nav class="footer-nav">
+          <h6>Support</h6>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dropavo Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="refund.html">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SCRIPTS
+       ======================================================================== -->
+  <script>
+    // Check login state and update nav
+    function updateNavForLoginState() {
+      const isLoggedIn = localStorage.getItem('dropavo_logged_in') === 'true';
+      const loggedOutNav = document.querySelector('.nav-actions-logged-out');
+      const loggedInNav = document.querySelector('.nav-actions-logged-in');
+      
+      if (isLoggedIn) {
+        if (loggedOutNav) loggedOutNav.style.display = 'none';
+        if (loggedInNav) loggedInNav.style.display = 'flex';
+      } else {
+        if (loggedOutNav) loggedOutNav.style.display = 'flex';
+        if (loggedInNav) loggedInNav.style.display = 'none';
+      }
+    }
+    
+    updateNavForLoginState();
+    
+    // Header background on scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(10, 10, 15, 0.95)';
+      } else {
+        header.style.background = 'rgba(10, 10, 15, 0.8)';
+      }
+    });
+    
+    // Filter products
+    function filterProducts() {
+      const searchTerm = document.getElementById('product-search').value.toLowerCase();
+      const products = document.querySelectorAll('.product-card');
+      const checkedCategories = Array.from(document.querySelectorAll('.filter-checkbox input[value]:checked'))
+        .filter(cb => ['electronics', 'fashion', 'home', 'beauty', 'sports', 'toys', 'pets', 'automotive'].includes(cb.value))
+        .map(cb => cb.value);
+      
+      let visibleCount = 0;
+      
+      products.forEach(product => {
+        const name = product.querySelector('.product-name').textContent.toLowerCase();
+        const category = product.dataset.category;
+        
+        let showProduct = true;
+        
+        // Search filter
+        if (searchTerm && !name.includes(searchTerm)) {
+          showProduct = false;
+        }
+        
+        // Category filter
+        if (checkedCategories.length > 0 && !checkedCategories.includes(category)) {
+          showProduct = false;
+        }
+        
+        product.style.display = showProduct ? 'flex' : 'none';
+        if (showProduct) visibleCount++;
+      });
+      
+      document.getElementById('results-count').textContent = visibleCount;
+    }
+    
+    // Clear all filters
+    function clearFilters() {
+      document.getElementById('product-search').value = '';
+      document.querySelectorAll('.filter-checkbox input').forEach(cb => cb.checked = false);
+      document.getElementById('price-min').value = '';
+      document.getElementById('price-max').value = '';
+      document.querySelectorAll('.filter-tag').forEach(tag => tag.classList.remove('active'));
+      filterProducts();
+    }
+    
+    // Toggle filter tag
+    function toggleTag(button) {
+      button.classList.toggle('active');
+      filterProducts();
+    }
+    
+    // Sort products
+    function sortProducts() {
+      const sortValue = document.getElementById('sort-select').value;
+      const grid = document.getElementById('products-grid');
+      const products = Array.from(grid.querySelectorAll('.product-card'));
+      
+      products.sort((a, b) => {
+        switch (sortValue) {
+          case 'price-low':
+            return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+          case 'price-high':
+            return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+          case 'margin':
+            return parseFloat(b.dataset.margin) - parseFloat(a.dataset.margin);
+          case 'rating':
+            return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+          default:
+            return 0;
+        }
+      });
+      
+      products.forEach(product => grid.appendChild(product));
+    }
+  </script>
+</body>
+</html>

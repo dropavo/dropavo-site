@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn dropshipping with Dropavo's free curriculum. Master product research, store setup, marketing, and earn your certificate.">
+  
+  <title>Learn Dropshipping — Dropavo</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- jsPDF for certificate generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥑</text></svg>">
+</head>
+<body>
+  <!-- ========================================================================
+       HEADER / NAVIGATION
+       ======================================================================== -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <img src="logo.png" alt="Dropavo" class="logo-img">
+        </div>
+        <span class="logo-wordmark">Dropavo</span>
+      </a>
+      
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="dropship.html" class="nav-link">Dropship</a>
+        <a href="learn.html" class="nav-link active">Learn</a>
+        <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      
+      <!-- Nav Actions (Logged Out) -->
+      <div class="nav-actions nav-actions-logged-out">
+        <a href="login.html" class="btn btn-ghost">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Get Started Free</a>
+      </div>
+      
+      <!-- Nav Actions (Logged In) -->
+      <div class="nav-actions nav-actions-logged-in" style="display: none;">
+        <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       LEARN HERO
+       ======================================================================== -->
+  <section class="learn-hero">
+    <div class="container">
+      <div class="learn-hero-badge">
+        <span class="dot"></span>
+        <span>100% Free Curriculum</span>
+      </div>
+      <h1>Master Dropshipping with <span class="text-gradient">Dropavo Academy</span></h1>
+      <p>Learn everything you need to build a successful dropshipping business. Complete the curriculum and earn your official Dropavo Certificate.</p>
+      
+      <!-- Progress Overview -->
+      <div class="learn-progress-overview">
+        <div class="progress-stat">
+          <span class="progress-value" id="completed-count">0</span>
+          <span class="progress-label">Completed</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="overall-progress" style="width: 0%"></div>
+        </div>
+        <div class="progress-stat">
+          <span class="progress-value">12</span>
+          <span class="progress-label">Total Lessons</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SKILL TREE SECTION
+       ======================================================================== -->
+  <section class="skill-tree-section">
+    <div class="container">
+      
+      <!-- Track 1: Getting Started -->
+      <div class="skill-track">
+        <div class="track-header">
+          <div class="track-icon" style="background: linear-gradient(135deg, #00d4aa, #00b4d8);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="track-info">
+            <h2>Getting Started</h2>
+            <p>Learn the fundamentals of dropshipping and set up your foundation</p>
+          </div>
+          <div class="track-progress">
+            <span id="track1-progress">0/3</span>
+          </div>
+        </div>
+        
+        <div class="skill-nodes">
+          <div class="skill-node" data-lesson="1" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>What is Dropshipping?</h3>
+                <p>Understand the business model and how Dropavo fits in</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    8 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="2" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Setting Up Your Account</h3>
+                <p>Create your Dropavo account and configure settings</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    5 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="3" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Understanding Suppliers</h3>
+                <p>Learn about Zendrop and how supplier relationships work</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    10 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Track 2: Product Research -->
+      <div class="skill-track">
+        <div class="track-header">
+          <div class="track-icon" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+          <div class="track-info">
+            <h2>Product Research</h2>
+            <p>Find winning products that sell and maximize your profit margins</p>
+          </div>
+          <div class="track-progress">
+            <span id="track2-progress">0/3</span>
+          </div>
+        </div>
+        
+        <div class="skill-nodes">
+          <div class="skill-node" data-lesson="4" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Finding Winning Products</h3>
+                <p>Criteria for selecting products with high profit potential</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    12 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="5" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Using Dropavo's Product Discovery</h3>
+                <p>Master the filters and tools to find the best products</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    8 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="6" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Pricing Strategies</h3>
+                <p>Set competitive prices while maintaining healthy margins</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    10 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Track 3: Store Setup -->
+      <div class="skill-track">
+        <div class="track-header">
+          <div class="track-icon" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="track-info">
+            <h2>Store Setup</h2>
+            <p>Build your online store and connect it to Dropavo</p>
+          </div>
+          <div class="track-progress">
+            <span id="track3-progress">0/3</span>
+          </div>
+        </div>
+        
+        <div class="skill-nodes">
+          <div class="skill-node" data-lesson="7" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Shopify Store Basics</h3>
+                <p>Create and configure your Shopify store from scratch</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    15 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="8" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Connecting Dropavo</h3>
+                <p>Integrate your store with Dropavo for automated fulfillment</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    6 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="9" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Importing Products</h3>
+                <p>Push products from Dropavo to your store with one click</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    7 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Track 4: Marketing & Growth -->
+      <div class="skill-track">
+        <div class="track-header">
+          <div class="track-icon" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <div class="track-info">
+            <h2>Marketing & Growth</h2>
+            <p>Drive traffic and scale your dropshipping business</p>
+          </div>
+          <div class="track-progress">
+            <span id="track4-progress">0/3</span>
+          </div>
+        </div>
+        
+        <div class="skill-nodes">
+          <div class="skill-node" data-lesson="10" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Social Media Marketing</h3>
+                <p>Build a presence on TikTok, Instagram, and Facebook</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    14 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="11" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Running Paid Ads</h3>
+                <p>Create effective ad campaigns on Meta and TikTok</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    18 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-node" data-lesson="12" onclick="completeLesson(this)">
+            <div class="node-connector"></div>
+            <div class="node-content">
+              <div class="node-status">
+                <svg class="status-incomplete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                </svg>
+                <svg class="status-complete" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="node-info">
+                <h3>Scaling Your Business</h3>
+                <p>Strategies to grow from $0 to $10K+ per month</p>
+                <div class="node-meta">
+                  <span class="meta-duration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    20 min
+                  </span>
+                  <span class="meta-type">Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certificate Section -->
+      <div class="certificate-section" id="certificate-section" style="display: none;">
+        <div class="certificate-unlocked">
+          <div class="certificate-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </div>
+          <h2>🎉 Congratulations!</h2>
+          <p>You've completed the Dropavo Academy curriculum. Download your official certificate below.</p>
+          
+          <div class="certificate-name-input">
+            <label for="cert-name">Your Name (as it will appear on the certificate)</label>
+            <input type="text" id="cert-name" placeholder="Enter your full name">
+          </div>
+          
+          <button class="btn btn-primary btn-lg" onclick="generateCertificate()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download Certificate (PDF)
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <img src="logo.png" alt="Dropavo" class="logo-img">
+            </div>
+            <span class="logo-wordmark">Dropavo</span>
+          </a>
+          <p>The intelligent dropshipping platform for modern merchants. Connect, automate, scale.</p>
+        </div>
+        
+        <nav class="footer-nav">
+          <h6>Product</h6>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="dropship.html">Dropship</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="#api">API Docs</a></li>
+          </ul>
+        </nav>
+        
+        <nav class="footer-nav">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <nav class="footer-nav">
+          <h6>Support</h6>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dropavo Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="refund.html">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SCRIPTS
+       ======================================================================== -->
+  <script>
+    // Check login state and update nav
+    function updateNavForLoginState() {
+      const isLoggedIn = localStorage.getItem('dropavo_logged_in') === 'true';
+      const loggedOutNav = document.querySelector('.nav-actions-logged-out');
+      const loggedInNav = document.querySelector('.nav-actions-logged-in');
+      
+      if (isLoggedIn) {
+        if (loggedOutNav) loggedOutNav.style.display = 'none';
+        if (loggedInNav) loggedInNav.style.display = 'flex';
+      } else {
+        if (loggedOutNav) loggedOutNav.style.display = 'flex';
+        if (loggedInNav) loggedInNav.style.display = 'none';
+      }
+    }
+    
+    updateNavForLoginState();
+    
+    // Header background on scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(10, 10, 15, 0.95)';
+      } else {
+        header.style.background = 'rgba(10, 10, 15, 0.8)';
+      }
+    });
+    
+    // Load progress from localStorage
+    function loadProgress() {
+      const completed = JSON.parse(localStorage.getItem('dropavo_lessons') || '[]');
+      completed.forEach(lessonId => {
+        const node = document.querySelector(`.skill-node[data-lesson="${lessonId}"]`);
+        if (node) {
+          node.classList.add('completed');
+        }
+      });
+      updateProgressDisplay();
+    }
+    
+    // Complete a lesson
+    function completeLesson(node) {
+      const lessonId = node.dataset.lesson;
+      let completed = JSON.parse(localStorage.getItem('dropavo_lessons') || '[]');
+      
+      if (!completed.includes(lessonId)) {
+        completed.push(lessonId);
+        localStorage.setItem('dropavo_lessons', JSON.stringify(completed));
+        node.classList.add('completed');
+        
+        // Add animation
+        node.classList.add('just-completed');
+        setTimeout(() => node.classList.remove('just-completed'), 600);
+      }
+      
+      updateProgressDisplay();
+    }
+    
+    // Update progress display
+    function updateProgressDisplay() {
+      const completed = JSON.parse(localStorage.getItem('dropavo_lessons') || '[]');
+      const totalLessons = 12;
+      
+      // Overall progress
+      document.getElementById('completed-count').textContent = completed.length;
+      document.getElementById('overall-progress').style.width = `${(completed.length / totalLessons) * 100}%`;
+      
+      // Track progress
+      const track1 = completed.filter(l => ['1', '2', '3'].includes(l)).length;
+      const track2 = completed.filter(l => ['4', '5', '6'].includes(l)).length;
+      const track3 = completed.filter(l => ['7', '8', '9'].includes(l)).length;
+      const track4 = completed.filter(l => ['10', '11', '12'].includes(l)).length;
+      
+      document.getElementById('track1-progress').textContent = `${track1}/3`;
+      document.getElementById('track2-progress').textContent = `${track2}/3`;
+      document.getElementById('track3-progress').textContent = `${track3}/3`;
+      document.getElementById('track4-progress').textContent = `${track4}/3`;
+      
+      // Show certificate section if all completed
+      if (completed.length >= totalLessons) {
+        document.getElementById('certificate-section').style.display = 'block';
+        document.getElementById('certificate-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+    
+    // Generate PDF Certificate
+    function generateCertificate() {
+      const { jsPDF } = window.jspdf;
+      const name = document.getElementById('cert-name').value.trim() || 'Graduate';
+      
+      // Create PDF (landscape)
+      const doc = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: 'a4'
+      });
+      
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      
+      // Background color
+      doc.setFillColor(10, 10, 15);
+      doc.rect(0, 0, pageWidth, pageHeight, 'F');
+      
+      // Border
+      doc.setDrawColor(0, 212, 170);
+      doc.setLineWidth(2);
+      doc.rect(10, 10, pageWidth - 20, pageHeight - 20);
+      
+      // Inner border
+      doc.setDrawColor(0, 180, 216);
+      doc.setLineWidth(0.5);
+      doc.rect(15, 15, pageWidth - 30, pageHeight - 30);
+      
+      // Decorative corners
+      doc.setDrawColor(0, 212, 170);
+      doc.setLineWidth(1);
+      // Top left
+      doc.line(20, 25, 40, 25);
+      doc.line(25, 20, 25, 40);
+      // Top right
+      doc.line(pageWidth - 40, 25, pageWidth - 20, 25);
+      doc.line(pageWidth - 25, 20, pageWidth - 25, 40);
+      // Bottom left
+      doc.line(20, pageHeight - 25, 40, pageHeight - 25);
+      doc.line(25, pageHeight - 40, 25, pageHeight - 20);
+      // Bottom right
+      doc.line(pageWidth - 40, pageHeight - 25, pageWidth - 20, pageHeight - 25);
+      doc.line(pageWidth - 25, pageHeight - 40, pageWidth - 25, pageHeight - 20);
+      
+      // Title
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(14);
+      doc.setFont('helvetica', 'normal');
+      doc.text('DROPAVO ACADEMY', pageWidth / 2, 45, { align: 'center' });
+      
+      // Certificate text
+      doc.setFontSize(36);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(0, 212, 170);
+      doc.text('Certificate of Completion', pageWidth / 2, 65, { align: 'center' });
+      
+      // Awarded to
+      doc.setTextColor(180, 180, 180);
+      doc.setFontSize(14);
+      doc.setFont('helvetica', 'normal');
+      doc.text('This certifies that', pageWidth / 2, 85, { align: 'center' });
+      
+      // Name
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(32);
+      doc.setFont('helvetica', 'bold');
+      doc.text(name, pageWidth / 2, 105, { align: 'center' });
+      
+      // Description
+      doc.setTextColor(180, 180, 180);
+      doc.setFontSize(12);
+      doc.setFont('helvetica', 'normal');
+      doc.text('has successfully completed the Dropavo Academy Dropshipping Curriculum,', pageWidth / 2, 125, { align: 'center' });
+      doc.text('demonstrating proficiency in product research, store setup, and marketing strategies.', pageWidth / 2, 133, { align: 'center' });
+      
+      // Date
+      const date = new Date().toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      });
+      doc.setTextColor(150, 150, 150);
+      doc.setFontSize(11);
+      doc.text(`Issued on ${date}`, pageWidth / 2, 150, { align: 'center' });
+      
+      // Signature line
+      doc.setDrawColor(100, 100, 100);
+      doc.setLineWidth(0.3);
+      doc.line(pageWidth / 2 - 40, 175, pageWidth / 2 + 40, 175);
+      
+      // Signature (script font simulation with italic)
+      doc.setTextColor(0, 212, 170);
+      doc.setFontSize(20);
+      doc.setFont('times', 'italic');
+      doc.text('Dropavo Team', pageWidth / 2, 172, { align: 'center' });
+      
+      // Title under signature
+      doc.setTextColor(150, 150, 150);
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      doc.text('Dropavo Academy', pageWidth / 2, 182, { align: 'center' });
+      
+      // Certificate ID
+      const certId = 'DRP-' + Date.now().toString(36).toUpperCase();
+      doc.setTextColor(100, 100, 100);
+      doc.setFontSize(8);
+      doc.text(`Certificate ID: ${certId}`, pageWidth / 2, pageHeight - 20, { align: 'center' });
+      
+      // Save
+      doc.save(`Dropavo-Certificate-${name.replace(/\s+/g, '-')}.pdf`);
+    }
+    
+    // Reset progress (for testing)
+    function resetProgress() {
+      localStorage.removeItem('dropavo_lessons');
+      location.reload();
+    }
+    
+    // Load progress on page load
+    loadProgress();
+  </script>
+</body>
+</html>
